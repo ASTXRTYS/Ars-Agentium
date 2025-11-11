@@ -1,0 +1,60 @@
+{
+  "extends": "@tsconfig/recommended",
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": [
+      "ES2021",
+      "ES2022.Object",
+      "DOM"
+    ],
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useDefineForClassFields": true,
+    "strictPropertyInitialization": false,
+    "stripInternal": true,
+    "allowJs": true,
+    "strict": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "coverage"
+  ],
+  "includeVersion": true,
+  "typedocOptions": {
+    "entryPoints": [
+      "src/client.ts",
+      "src/run_trees.ts",
+      "src/traceable.ts",
+      "src/evaluation/index.ts",
+      "src/evaluation/langchain.ts",
+      "src/schemas.ts",
+      "src/langchain.ts",
+      "src/jest/index.ts",
+      "src/jest/reporter.ts",
+      "src/vercel.ts",
+      "src/vitest/index.ts",
+      "src/vitest/reporter.ts",
+      "src/wrappers/index.ts",
+      "src/anonymizer/index.ts",
+      "src/wrappers/openai.ts",
+      "src/wrappers/vercel.ts",
+      "src/singletons/traceable.ts",
+      "src/utils/jestlike/index.ts",
+      "src/experimental/otel/setup.ts",
+      "src/experimental/otel/exporter.ts",
+      "src/experimental/otel/processor.ts",
+      "src/experimental/vercel/index.ts"
+    ]
+  }
+}

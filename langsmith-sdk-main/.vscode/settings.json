@@ -1,0 +1,10 @@
+{
+  "cSpell.words": ["atee"],
+  "python.testing.pytestArgs": ["python"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.formatting.provider": "ruff",
+  "eslint.workingDirectories": [
+    "./js"
+  ]
+}
