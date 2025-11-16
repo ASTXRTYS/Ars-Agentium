@@ -1,0 +1,5 @@
+jupyter
+bs4
+nbconvert
+tqdm
+black
