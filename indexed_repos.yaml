@@ -17,7 +17,7 @@ repos:
 
   - name: deepagents
     local_path: deepagents-master
-    upstream: https://github.com/ASTXRTYS/deepagents.git
+    upstream: https://github.com/langchain-ai/deepagents
     branch: main
     category: core-framework
 
