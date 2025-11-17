@@ -1,3 +1,15 @@
 # Local helper files (do not commit)
 SYNCING.md
 indexed_repos.yaml
+
+# Image and media files (snapshots of external repos should not include large binaries)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.ico
+*.mp4
+*.mov
+*.avi
+*.svg
