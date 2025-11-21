@@ -188,7 +188,7 @@ async def execute_task(
         final_input = prompt_text
 
     config = {
-        "configurable": {"thread_id": "main"},
+        "configurable": {"thread_id": session_state.thread_id},
         "metadata": {"assistant_id": assistant_id} if assistant_id else {},
     }
 
@@ -546,6 +546,14 @@ async def execute_task(
                                 assistant_id,
                             )
                             decisions.append(decision)
+
+                            # Mark file operations as HIL-approved if user approved
+                            if decision.get("type") == "approve":
+                                tool_name = action_request.get("name")
+                                if tool_name in {"write_file", "edit_file"}:
+                                    file_op_tracker.mark_hitl_approved(
+                                        tool_name, action_request.get("args", {})
+                                    )
 
                         if any(decision.get("type") == "reject" for decision in decisions):
                             any_rejected = True
